@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Link, useNavigate, useLocation } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 const ContactUs = () => {
   const navigate = useNavigate();
   const [isSubbed, setIsSubbed] = useState(false);
