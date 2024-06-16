@@ -3,9 +3,7 @@ import DateRangePicker from 'components/ux/data-range-picker/DateRangePicker';
 import Input from 'components/ux/input/Input';
 
 /**
- * GlobalSearchBox Component
- * Renders a search box with input fields for location, number of guests, and a date range picker.
- * It includes a search button to trigger the search based on the entered criteria.
+
  *
  * @param {Object} props - Props for the component.
  * @param {string} props.locationInputValue - The current value of the location input.

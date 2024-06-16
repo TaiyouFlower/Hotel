@@ -18,7 +18,7 @@ const GlobalFooter = () => {
           <div className="w-full md:w-1/3 mb-6 md:mb-0">
             <h4 className="font-bold text-lg mb-2">Company Info</h4>
             <FooterLink to="/about-us" label="About Us" />
-            <FooterLink to="/" label="Contact" />
+            <FooterLink to="/contact-us" label="Contact" />
             <FooterLink to="/" label="Privacy Policy" />
           </div>
           <div className="w-full md:w-1/3 mb-6 md:mb-0">

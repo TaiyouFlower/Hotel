@@ -77,6 +77,22 @@ const HotelsSearch = () => {
     { value: 'default', label: 'Sort by' },
     { value: 'priceLowToHigh', label: SORTING_FILTER_LABELS.PRICE_LOW_TO_HIGH },
     { value: 'priceHighToLow', label: SORTING_FILTER_LABELS.PRICE_HIGH_TO_LOW },
+    {
+      value: 'ratingLowToHigh',
+      label: SORTING_FILTER_LABELS.RATING_LOW_TO_HIGH,
+    },
+    {
+      value: 'ratingHighToLow',
+      label: SORTING_FILTER_LABELS.RATING_HIGH_TO_LOW,
+    },
+    {
+      value: 'alphabeticalAZ',
+      label: SORTING_FILTER_LABELS.ALPHABETICAL_A_TO_Z,
+    },
+    {
+      value: 'alphabeticalZA',
+      label: SORTING_FILTER_LABELS.ALPHABETICAL_Z_TO_A,
+    },
   ];
 
   /**
