@@ -24,7 +24,7 @@ const ContactUs = () => {
     }
   };
   return (
-    <div className="min-h-screen bg-white flex flex-col items-center p-4">
+    <div className="bg-white flex flex-col items-center p-4">
       <h1
         className="text-4xl font-bold mb-8"
         style={{ color: 'rgb(7, 68, 152)' }}
