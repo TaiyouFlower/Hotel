@@ -31,4 +31,6 @@ export const SORTING_FILTER_LABELS = Object.freeze({
   PRICE_HIGH_TO_LOW: 'Price: High to Low',
   RATING_LOW_TO_HIGH: 'Rating: Low to High',
   RATING_HIGH_TO_LOW: 'Rating: High to Low',
+  ALPHABETICAL_A_TO_Z: `Alphabetical A to Z`,
+  ALPHABETICAL_Z_TO_A: `Alphabetical Z to A`,
 });

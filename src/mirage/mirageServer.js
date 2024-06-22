@@ -8,7 +8,6 @@ export function makeServer({ environment = 'development' } = {}) {
 
     models: {
       user: Model,
-      // Define other models here if needed
     },
 
     seeds(server) {
@@ -40,8 +39,6 @@ export function makeServer({ environment = 'development' } = {}) {
 
     routes() {
       this.namespace = 'api';
-
-      // Add a logged-in user state to the server
       let loggedInUser = null;
 
       this.passthrough('http://localhost:4000/*');
@@ -360,7 +357,6 @@ export function makeServer({ environment = 'development' } = {}) {
       });
 
       this.get('/hotel/:hotelId/reviews', (_schema, request) => {
-        // hardcoded hotelId for now so to not add mock for each hotel
         const currentPage = request.queryParams.currentPage;
         let hotelId = 71222;
         const result = hotelsData.find((hotel) => {
@@ -385,7 +381,6 @@ export function makeServer({ environment = 'development' } = {}) {
           starCounts,
         };
 
-        //paging
         const pageSize = 5;
         const paging = {
           currentPage: currentPage || 1,
@@ -394,7 +389,6 @@ export function makeServer({ environment = 'development' } = {}) {
           pageSize,
         };
 
-        // paginated data
         const data = result.reviews.data.slice(
           (paging.currentPage - 1) * pageSize,
           paging.currentPage * pageSize
@@ -411,11 +405,6 @@ export function makeServer({ environment = 'development' } = {}) {
       });
 
       this.put('/hotel/add-review', (schema, request) => {
-        // const attrs = JSON.parse(request.requestBody);
-        // const hotelId = attrs.hotelId;
-        // const review = attrs.review;
-        // const rating = attrs.rating;
-        // const user = schema.users.findBy({ email: attrs.email });
         return new Response(
           200,
           {},
@@ -459,7 +448,6 @@ export function makeServer({ environment = 'development' } = {}) {
                 return Math.abs(hotelRating - selected) <= range;
               });
             } else {
-              // If no star ratings are provided, return all hotels for the city (or all cities if city is empty)
               return true;
             }
           }
@@ -478,9 +466,32 @@ export function makeServer({ environment = 'development' } = {}) {
               return b.price - a.price;
             });
           }
+          if (sortType === 'ratingLowToHigh') {
+            filteredResults.sort((a, b) => {
+              const aRating = parseFloat(a.ratings);
+              const bRating = parseFloat(b.ratings);
+              return aRating - bRating;
+            });
+          }
+          if (sortType === 'ratingHighToLow') {
+            filteredResults.sort((a, b) => {
+              const aRating = parseFloat(a.ratings);
+              const bRating = parseFloat(b.ratings);
+              return bRating - aRating;
+            });
+          }
+          if (sortType === 'alphabeticalAZ') {
+            filteredResults.sort((a, b) => {
+              return a.title.localeCompare(b.title);
+            });
+          }
+          if (sortType === 'alphabeticalZA') {
+            filteredResults.sort((a, b) => {
+              return b.title.localeCompare(a.title);
+            });
+          }
         }
 
-        // pagination config
         const pageSize = 6;
         const totalPages =
           Math.floor((filteredResults.length - 1) / pageSize) + 1;
@@ -617,7 +628,7 @@ export function makeServer({ environment = 'development' } = {}) {
                 }
               )
             );
-          }, 6000); // 2000 milliseconds = 2 seconds
+          }, 6000);
         });
       });
 
