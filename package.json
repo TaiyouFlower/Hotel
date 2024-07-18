@@ -32,8 +32,10 @@
     "test": "npx cypress run --e2e && npx cypress run --component",
     "eject": "react-scripts eject",
     "format:check": "prettier --check 'src/**/*.{js,jsx,ts,tsx,json,css,md}'",
+    "lint": "eslint --fix --ext .js,.jsx .",
     "lint:check": "eslint .",
     "lint-fix": "lint-staged",
+    "lint-staged:debug": "lint-staged --debug",
     "prepare": "husky install",
     "cypress:open": "cypress open",
     "cypress:run": "npx cypress run --e2e && npx cypress run --component"
@@ -53,8 +55,7 @@
   "lint-staged": {
     "src/**/*.{js,jsx,ts,tsx,json,css,md}": [
       "prettier --write 'src/**/*.{js,jsx,ts,tsx,json,css,md}'",
-      "eslint --fix .",
-      "git add"
+      "eslint --fix ." 
     ]
   },
   "devDependencies": {

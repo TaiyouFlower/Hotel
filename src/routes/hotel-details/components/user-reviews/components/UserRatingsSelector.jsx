@@ -52,7 +52,7 @@ const UserRatingsSelector = ({
         onChange={(e) => handleUserReviewChange(e.target.value)}
       />
       <button
-        className="w-full px-4 py-2 my-2 font-bold text-white rounded bg-brand hover:bg-blue-700 focus:outline-none focus:shadow-outline"
+        className="w-full px-4 py-2 my-2 font-bold text-white rounded bg-brand hover:bg-red-900 focus:outline-none focus:shadow-outline"
         onClick={handleReviewSubmit}
       >
         Submit

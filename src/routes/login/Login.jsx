@@ -33,11 +33,6 @@ const Login = () => {
   const handleInputChange = (e) => {
     setLoginData({ ...loginData, [e.target.name]: e.target.value });
   };
-  const handleFacebookLogin = (e) => {
-    e.preventDefault();
-    alert('No Facebook Credentials Detected!');
-  };
-
   /**
    * Handles the submission of the login form.
    * Attempts to authenticate the user with the provided credentials.
@@ -116,22 +111,15 @@ const Login = () => {
               <div className="flex flex-col items-center justify-center gap-2">
                 <button
                   type="submit"
-                  className="bg-brand hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline w-full"
+                  className="bg-brand hover:bg-red-900 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline w-full"
                 >
                   Log In
-                </button>
-                <button
-                  type="submit"
-                  onClick={handleFacebookLogin}
-                  className="bg-brand hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline w-full"
-                >
-                  Log In with Facebook
                 </button>
               </div>
               <div className="flex flex-wrap justify-center my-3 w-full">
                 <Link
                   to="/forgot-password"
-                  className="inline-block align-baseline text-md text-gray-500 hover:text-blue-800 text-right"
+                  className="inline-block align-baseline text-md text-gray-500 hover:text-red-900 text-right"
                 >
                   Forgot your password?
                 </Link>
@@ -140,14 +128,14 @@ const Login = () => {
                 <div className="absolute left-0 right-0 flex justify-center items-center">
                   <div className="border-t w-full absolute"></div>
                   <span className="bg-white px-3 text-gray-500 z-10">
-                    New to Stay Booker?
+                    New to Nia's Booking?
                   </span>
                 </div>
               </div>
               <div className="flex flex-wrap justify-center my-3 w-full mt-12">
                 <Link
                   to="/register"
-                  className="inline-block align-baseline font-medium text-md text-brand hover:text-blue-800 text-right"
+                  className="inline-block align-baseline font-medium text-md text-brand hover:text-red-900 text-right"
                 >
                   Create an account
                 </Link>

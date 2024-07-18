@@ -9,18 +9,18 @@ const AboutUs = () => {
     <div className="container mx-auto px-4 py-8">
       <h1 className="text-4xl font-extrabold text-brand mb-2">About Us</h1>
       <p className="text-lg mb-8">
-        Welcome to <span className="text-brand">Stay BOOKER</span>, where we are
-        dedicated to providing you with the best experience for booking hotels
-        around the world. Our mission is to make your travel comfortable,
+        Welcome to <span className="text-brand">Nia's Booking</span>, where we
+        are dedicated to providing you with the best experience for booking
+        hotels around the world. Our mission is to make your travel comfortable,
         convenient, and memorable.
       </p>
 
       <h2 className="text-3xl font-extrabold text-brand mb-2">Our Vision</h2>
       <p className="text-lg mb-8">
-        At <span className="text-brand">Stay BOOKER</span>, we envision a world
-        where every traveler finds the perfect accommodation that suits their
-        needs and preferences. We aim to simplify the hotel booking process,
-        offering a wide range of options for every budget.
+        At <span className="text-brand">Nia's Booking</span>, we envision a
+        world where every traveler finds the perfect accommodation that suits
+        their needs and preferences. We aim to simplify the hotel booking
+        process, offering a wide range of options for every budget.
       </p>
 
       <h2 className="text-3xl font-extrabold text-brand mb-2">

@@ -112,14 +112,14 @@ const ForgotPassword = () => {
                 <div className="flex-wrap items-center justify-between">
                   <button
                     type="submit"
-                    className="w-full bg-brand hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+                    className="w-full bg-brand hover:bg-red-900 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
                   >
                     Reset your password
                   </button>
                   <div className="mt-5">
                     <Link
                       to="/login"
-                      className="inline-block align-baseline text-lg text-gray-500 hover:text-blue-800 text-right"
+                      className="inline-block align-baseline text-lg text-gray-500 hover:text-red-900 text-right"
                     >
                       Back to login
                     </Link>

@@ -196,7 +196,7 @@ export function makeServer({ environment = 'development' } = {}) {
                   hotelName: 'Seaside Resort',
                   checkInDate: '2024-01-20',
                   checkOutDate: '2024-01-25',
-                  totalFare: '₹14,500',
+                  totalFare: '₾,500',
                 },
                 {
                   bookingId: 'BKG124',
@@ -204,7 +204,7 @@ export function makeServer({ environment = 'development' } = {}) {
                   hotelName: 'Mountain Retreat',
                   checkInDate: '2024-02-15',
                   checkOutDate: '2024-02-20',
-                  totalFare: '₹5,890',
+                  totalFare: '₾,890',
                 },
                 {
                   bookingId: 'BKG125',
@@ -212,7 +212,7 @@ export function makeServer({ environment = 'development' } = {}) {
                   hotelName: 'City Central Hotel',
                   checkInDate: '2024-03-01',
                   checkOutDate: '2024-03-05',
-                  totalFare: '₹21,700',
+                  totalFare: '₾21,700',
                 },
               ],
             },

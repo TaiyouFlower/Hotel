@@ -40,9 +40,6 @@ const Register = () => {
       setShowToast(true);
     }
   };
-  const handleFacebookRegister = () => {
-    alert('Dummy button! Please register on your own. :)');
-  };
   return (
     <>
       <div className="register__form">
@@ -123,20 +120,14 @@ const Register = () => {
                   <div className="flex flex-col gap-2  items-center w-full my-3">
                     <button
                       type="submit"
-                      className="w-full px-4 py-2 font-bold text-white rounded bg-brand hover:bg-blue-700 focus:outline-none focus:shadow-outline"
+                      className="w-full px-4 py-2 font-bold text-white rounded bg-brand hover:bg-red-900 focus:outline-none focus:shadow-outline"
                     >
                       Register
-                    </button>
-                    <button
-                      onClick={handleFacebookRegister}
-                      className="w-full px-4 py-2 font-bold text-white rounded bg-brand hover:bg-blue-700 focus:outline-none focus:shadow-outline"
-                    >
-                      Register with Facebook
                     </button>
                   </div>
                   <Link
                     to="/login"
-                    className="inline-block w-full text-lg text-center text-gray-500 align-baseline hover:text-blue-800"
+                    className="inline-block w-full text-lg text-center text-gray-500 align-baseline hover:text-red-900"
                   >
                     Back to login
                   </Link>
